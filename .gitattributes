@@ -1,2 +1,30 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+package FirstPorject;
+
+public class ImplicitAndExplicitConversion {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+        // This is widening conversion also known as implicit  
+		byte b = 127;
+		short s = b;
+		int i = s;
+		long l = i;
+		float f = l;
+		double d = f; 
+		System.out.println(d);
+		
+// Now i will be doing in reverse order 
+//narrowing conversion also known as explicit  
+// I will be doing safe transfer since size is small
+	
+		double dd = 127; // if you try to increase the value then you may lose some data
+		float ff = (float) dd;
+		long ll = (long)ff;
+		int ii = (int)ll;
+		short ss = (short)ii;
+		byte bb = (byte)ss; 
+		
+		System.out.println(bb);
+	}
+
+}
